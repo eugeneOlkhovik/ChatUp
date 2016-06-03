@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/scrypt.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="run()">
+<div class="header">
+
+    <p class="welcome">Welcome to chat</p>
+    <p style="display: none" class="error">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        Error connection server
+    </p>
+    <div class="dropdown">
+        <button id="my-name" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Eugene <div class="caret"></div>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a onclick="rename()">edit name</a></li>
+            <li class="divider"></li>
+            <li class="logout"></li>
+        </ul>
+    </div>
+</div>
+<div class="window"><div class="container">
+    <div class="chat-area">
+        <div class="chat-list">
+            <ul class="list-message">
+
+            </ul>
+        </div>
+        <div class="input-message">
+            <div class="input">
+                <input type="text" id="input-text" class="input-text" placeholder="Enter your messages ...">
+            </div>
+            <div class="send">
+                <input type="button" class="send-button" value="Send">
+
+            </div>
+        </div>
+    </div>
+    <div class="user-panel">
+        <!--<div class="me-name">
+            <p>Your name:</p>
+            <p>Eugene</p>
+            <span class="glyphicon glyphicon-pencil"></span>
+        </div>-->
+        <div class="text-user">
+            <h3>Friend list</h3>
+        </div>
+        <div class="user-list">
+            <ul class="user-list-ul">
+
+            </ul>
+        </div>
+    </div>
+</div></div>
+
+<div class="footer">By Eugene Olkhovik</div>
+
+<div style="display: none" id="template" data-message-id="id">
+
+    <li class="message">
+
+        <div class="message-content">
+            <div class="name">
+                        <span class="name">
+                            user1
+                        </span>
+            </div>
+            <div class="message-text">
+                <p class="text">Hello world</p>
+            </div>
+
+            <div class="delete-and-editor">
+
+            </div>
+        </div>
+
+        <div class="time">
+            <span>5:00</span>
+        </div>
+    </li>
+</div>
+<div style="display: none" id="template-me" data-message-id="id">
+
+    <li class="message-me">
+        <div class="time">
+            <span>5:00</span>
+        </div>
+        <div class="message-content">
+            <div class="name">
+                <span class="name">Eugene</span>
+            </div>
+            <div class="message-text">
+                <p class="text">How a you?</p>
+            </div>
+            <div class="delete-and-editor">
+
+            </div>
+        </div>
+
+    </li>
+
+</div>
+
+</body>
+</html>

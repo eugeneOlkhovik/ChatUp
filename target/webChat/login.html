@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+    <script src="js/scrypt.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+    </head>
+<body onload="run()">
+<div class="container">
+    <form class="form-signin" method="post" action="/signup">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" name="username" id="name-input" class="input-block-level" placeholder="login">
+
+        <button class="btn btn-large btn-primary" onclick="loginInput()" type="submit">Sign in</button>
+    </form>
+</div>
+
+</body>
+</html>
